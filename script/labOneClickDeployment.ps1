@@ -133,16 +133,16 @@ function InitVariables{
     $global:useCaseName = $global:useCaseName.Replace('(','')
     $global:useCaseName = $global:useCaseName.Replace(')','')
     $global:dataName = $global:useCaseName + 'data' + $global:datePart
-    if($global:dataName.Length -gt 22)
+    if($global:dataName.Length -gt 24)
      {
-        $global:dataName = $global:dataName.Substring(0,22)
+        $global:dataName = $global:dataName.Substring(0,24)
      }
 
      $global:storageContainerName = $global:labContainer
      $global:storageAccountName = $global:useCaseName + "store" + $global:datePart
-     if($global:storageAccountName.Length -gt 22)
+     if($global:storageAccountName.Length -gt 24)
      {
-        $global:storageAccountName = $global:storageAccountName.Substring(0,22)
+        $global:storageAccountName = $global:storageAccountName.Substring(0,24)
      }
      
      [string]$global:location = $global:ResourceGroup.Location  
